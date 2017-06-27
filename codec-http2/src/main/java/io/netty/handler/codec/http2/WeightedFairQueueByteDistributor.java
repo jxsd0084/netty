@@ -17,23 +17,14 @@ package io.netty.handler.codec.http2;
 import io.netty.util.collection.IntCollections;
 import io.netty.util.collection.IntObjectHashMap;
 import io.netty.util.collection.IntObjectMap;
-import io.netty.util.internal.DefaultPriorityQueue;
-import io.netty.util.internal.EmptyPriorityQueue;
-import io.netty.util.internal.MathUtil;
-import io.netty.util.internal.PriorityQueue;
-import io.netty.util.internal.PriorityQueueNode;
-import io.netty.util.internal.SystemPropertyUtil;
-import io.netty.util.internal.UnstableApi;
+import io.netty.util.internal.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
-import static io.netty.handler.codec.http2.Http2CodecUtil.CONNECTION_STREAM_ID;
-import static io.netty.handler.codec.http2.Http2CodecUtil.DEFAULT_MIN_ALLOCATION_CHUNK;
-import static io.netty.handler.codec.http2.Http2CodecUtil.DEFAULT_PRIORITY_WEIGHT;
-import static io.netty.handler.codec.http2.Http2CodecUtil.streamableBytes;
+import static io.netty.handler.codec.http2.Http2CodecUtil.*;
 import static io.netty.handler.codec.http2.Http2Error.INTERNAL_ERROR;
 import static io.netty.handler.codec.http2.Http2Exception.connectionError;
 import static java.lang.Integer.MAX_VALUE;

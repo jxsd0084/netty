@@ -559,7 +559,8 @@ public class DnsNameResolver extends InetNameResolver {
     }
 
     private InetAddress loopbackAddress() {
-        return preferredAddressType().localhost();
+//        return preferredAddressType().localhost();
+        return null;
     }
 
     /**
